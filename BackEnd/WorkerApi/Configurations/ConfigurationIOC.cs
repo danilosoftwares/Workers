@@ -18,7 +18,6 @@ namespace WorkerApi.Configurations
         public static IServiceCollection AddJWTAuthentication(this IServiceCollection service, IConfiguration config)
         {
             var jwtSettings = config.GetSection("JwtSettings").Get<JwtSettings>()!;
-            //service.AddSecurityServices(secret);
             service.AddAuthentication(x =>
                     {
                         x.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
@@ -29,14 +28,14 @@ namespace WorkerApi.Configurations
                    {
                        opt.TokenValidationParameters = new TokenValidationParameters()
                        {
-                           ValidateIssuerSigningKey = false,
+                           ValidateIssuerSigningKey = true,
                            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtSettings.Secret)),
-                           ValidateIssuer = false,
+                           ValidateIssuer = true,
                            ValidIssuer = jwtSettings.Issuer,
-                           ValidateAudience = false,
+                           ValidateAudience = true,
                            ValidAudience = jwtSettings.Audience,
                            ClockSkew = TimeSpan.Zero,
-                           ValidateLifetime = false,
+                           ValidateLifetime = true,
                            LifetimeValidator = (before, expires, token, param) =>
                            {
                                return expires > DateTime.UtcNow;
@@ -46,7 +45,6 @@ namespace WorkerApi.Configurations
                        opt.RequireHttpsMetadata = true;
                    });
             service.AddAuthorization();
-            //service.AddJwksManager().UseJwtValidation();
             service.AddMemoryCache();
 
             return service;
@@ -107,7 +105,6 @@ namespace WorkerApi.Configurations
 
         public static IServiceCollection AddCrossOrigin(this IServiceCollection services)
         {
-            //services.AddCors();
             services.AddCors(delegate (CorsOptions opt)
             {
                 opt.AddDefaultPolicy(delegate (CorsPolicyBuilder policy)
@@ -116,40 +113,8 @@ namespace WorkerApi.Configurations
                         .SetIsOriginAllowed((string o) => true);
                 });
             });
-            // var  MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
-            // services.AddCors(options =>
-            // {
-            //     options.AddPolicy(name: MyAllowSpecificOrigins,
-            //                     policy  =>
-            //                     {
-            //                         policy.WithOrigins("http://localhost.com:5500");
-            //                         policy.WithOrigins("http://127.0.0.1:5500");
-            //                         policy.AllowAnyMethod();
-            //                         policy.AllowAnyHeader();
-            //                         policy.AllowCredentials();
-
-            //                     });
-            // });
-
             return services;
         }
     }
 
 }
-
-// public class CustomResponseHandler : DelegatingHandler
-// {
-//     private readonly JsonSerializerSettings _jsonSerializerSettings;
-
-//     public CustomResponseHandler(JsonSerializerSettings jsonSerializerSettings = null)
-//     {
-//         _jsonSerializerSettings = jsonSerializerSettings ?? new JsonSerializerSettings();
-//     }
-
-//     protected override async Task<HttpResponseMessage> SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
-//     {
-//         // deixar para logs e analise de erros
-//         var response = await base.SendAsync(request, cancellationToken);
-//         return response;
-//     }
-// }
