@@ -15,12 +15,6 @@ builder.Services.AddRepositoryServices()
                 .AddCrossOrigin()
                 .AddJWTAuthentication(builder.Configuration);
 
-
-builder.Services.AddControllers()
-    .AddNewtonsoftJson(options =>
-        options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore);
-
-
 var app = builder.Build();
 if (app.Environment.IsDevelopment())
 {
@@ -34,6 +28,4 @@ app.UseAuthentication();
 app.UseAuthorization();
 app.MapWorkersRoutes();
 app.MapUsersRoutes();   
-
-
 app.Run();
