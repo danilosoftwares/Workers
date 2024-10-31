@@ -119,9 +119,9 @@ public class WorkerService : IWorkerService
         await _repository.Edit(editWorker);
         editWorker.PasswordHash = Cryptography.DecryptString(editWorker.PasswordHash);
 
+        await _phonesRepository.Delete(id);
         if (worker.Phones != null)
-        {
-            await _phonesRepository.Delete(id);
+        {            
             var phones = worker.Phones.Select(s => new Phones()
             {
                 PhoneNumber = s,
@@ -150,6 +150,7 @@ public class WorkerService : IWorkerService
         }
 
         await _repository.Delete(existingWorker);
+        await _phonesRepository.Delete(id);
         return new WorkerRemoveResponse()
         {
             Status = true,
