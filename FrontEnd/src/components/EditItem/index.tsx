@@ -62,6 +62,15 @@ export const EditItem: React.FC = () => {
     return submitted && !field && <small className="p-error">Campo obrigatório.</small>
   }
 
+  const isEdit = () => {
+    try{
+      const id = params["id"];
+      return id !== "-1";
+    } catch(e){
+      return false;
+    }
+  }
+
   const handleReturn = () => {
     navigate(`/`)
   }
@@ -78,8 +87,7 @@ export const EditItem: React.FC = () => {
       setSubmitted(false);
       if (worker.firstName && worker.lastName && worker.passwordHash && worker.workerNumber) {
         worker.phones = listPhones.map(m=>m.phone);
-        const id = params["id"];
-        const result = id === "-1" ? await CreateWorker(worker) : await EditWorker(worker);
+        const result = !isEdit() ? await CreateWorker(worker) : await EditWorker(worker);
         if (result.status) {
           toast.current?.show({ severity: 'success', summary: 'Success', detail: 'Funcionario alterado com sucesso!', life: 1000 });
           setTimeout(() => {
@@ -112,8 +120,8 @@ export const EditItem: React.FC = () => {
       })
       setWorkersLeaders(listSelect);
 
-      const id = params["id"];
-      if (id !== "-1") {
+      if (isEdit()) {
+        const id = params["id"];
         const item = await GetWorker(id ? id : ``);
         const changed = ({ ...item } as WorkersItem);
         setWorker(changed);

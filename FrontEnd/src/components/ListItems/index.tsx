@@ -13,6 +13,7 @@ import { ListItemsProps } from './types';
 import { useNavigate } from 'react-router-dom';
 import { AxiosError } from 'axios';
 import { Toast } from 'primereact/toast';
+import { Tag } from 'primereact/tag';
 
 
 const defaultFilters: DataTableFilterMeta = {
@@ -125,11 +126,20 @@ export const ListItems: React.FC<ListItemsProps> = ({}) => {
 
   const header = renderHeader();
 
+  const headerUser = () => {
+    const user = localStorage.getItem(`user`);
+    if (user){
+      const email = JSON.parse(user).email;
+      return email;
+    }
+  }
+
   return (
     <Container>
       <Toast ref={toast} />
       <BoxHeaderOut>
       <Button label="Sair do Sistema" size="small" onClick={exitSystem} />
+      <Tag severity="success" value={headerUser()} rounded></Tag>
       </BoxHeaderOut>
       <DataTable value={customers} style={{ width: "100%" }} scrollHeight="400px" paginator showGridlines rows={10} loading={loading} dataKey="id"
         filters={filters} globalFilterFields={['firstName', 'lastName', 'corporateEmail', 'workerNumber']} header={header}
