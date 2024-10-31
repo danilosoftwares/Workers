@@ -2,7 +2,7 @@
 /FrontEnd/node_modules
 /FrontEnd/package-lock.json
 
-
+.DS_Store
 # Configurações do Visual Studio
 .vscode/
 .vs/
