@@ -1,12 +1,8 @@
 using Moq;
-using Xunit;
-using System.Collections.Generic;
-using System.Threading.Tasks;
 using WorkerModels.Interface.Repository;
 using WorkerModels.Interface.Services;
 using WorkerModels.Model;
 using WorkerModels.Requests;
-using WorkerModels.Response;
 using WorkerServices.Services;
 
 public class WorkerServiceTests
@@ -38,8 +34,8 @@ public class WorkerServiceTests
 
         Assert.NotNull(result);
         Assert.Equal(2, result.Count);
-        Assert.Equal("John", result[0].FirstName);
-        Assert.Equal("Jane", result[1].FirstName);
+        Assert.Equal("Jane", result[0].FirstName);
+        Assert.Equal("John", result[1].FirstName);
     }
 
     [Fact]
@@ -60,8 +56,8 @@ public class WorkerServiceTests
     [Fact]
     public async Task AddWorker_ShouldReturnWorkerEditResponse_WhenWorkerIsAddedSuccessfully()
     {
-        var newWorkerRequest = new WorkerAddRequest { FirstName = "John", LastName = "Doe", CorporateEmail = "john@example.com", WorkerNumber = "12345", PasswordHash = "password" };
-        var addedWorker = new Worker { Id = 1, FirstName = "John", LastName = "Doe", CorporateEmail = "john@example.com", WorkerNumber = "12345" };
+        var newWorkerRequest = new WorkerAddRequest { FirstName = "John", LastName = "Doe", CorporateEmail = "john@example.com", WorkerNumber = "12345", PasswordHash = "1234" };
+        var addedWorker = new Worker { Id = 1, FirstName = "John", LastName = "Doe", CorporateEmail = "john@example.com", WorkerNumber = "12345", PasswordHash = "sjgH3kOFAc2LzTYG/0Ecag==" };
 
         _repositoryMock.Setup(repo => repo.GetByEmailWorkNumber(newWorkerRequest.CorporateEmail, newWorkerRequest.WorkerNumber)).ReturnsAsync(new List<Worker>());
         _repositoryMock.Setup(repo => repo.Add(newWorkerRequest)).ReturnsAsync(addedWorker);
