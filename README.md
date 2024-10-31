@@ -41,6 +41,7 @@ Este repositório contém uma aplicação completa que integra um backend robust
 
 A estrutura dos arquivos foi organizada para manter o código modular e reutilizável.
 
+```bash
 .
 ├── backend
 │   ├── WorkerApi
@@ -56,6 +57,7 @@ A estrutura dos arquivos foi organizada para manter o código modular e reutiliz
     │   ├── api
     │   ├── utils
     │   └── App.tsx
+```
 
 
 - **backend**: Contém a API RESTful desenvolvida em .NET 8.
