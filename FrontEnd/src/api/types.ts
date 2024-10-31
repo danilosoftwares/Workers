@@ -4,9 +4,8 @@ export interface WorkersAllReponse {
     lastName: string;
     corporateEmail: string;
     workerNumber: string;
-    phonenumbers: string | null;
-    leaderName: string | null;
-    phones?: string[];
+    leaderName?: string | null;
+    phones?: string[] | null;
 }
 
 export interface TokenResponse {
@@ -33,10 +32,9 @@ export interface WorkersItem {
     lastName: string;
     corporateEmail: string;
     workerNumber: string;
-    phonenumbers: string | null;
-    leaderName: string | null;
+    leaderName?: string | null;
     passwordHash: string;
-    phones?: string[];
+    phones?: string[] | null;
 }
 
 export interface DefaultBaseResponse<T> {

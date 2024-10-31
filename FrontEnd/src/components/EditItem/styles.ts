@@ -18,3 +18,14 @@ export const BoxLoading = styled.div`
     justify-content: center;
     align-items: center;
 `
+
+export const BoxMain = styled.div`
+    display: flex;
+    gap: 10px;
+`
+
+export const BoxPhones = styled.div`
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+`

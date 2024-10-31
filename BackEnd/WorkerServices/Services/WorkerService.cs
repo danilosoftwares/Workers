@@ -21,7 +21,7 @@ public class WorkerService : IWorkerService
     public async Task<List<WorkerItemFromAllResponse>> GetAllWorkers()
     {
         var all = await _repository.GetAll();
-        return all.Select(x => (WorkerItemFromAllResponse)x).ToList();
+        return all.Select(x => (WorkerItemFromAllResponse)x).OrderBy(b=>b.FirstName).ToList();
     }
 
     public async Task<WorkerItemResponse?> GetWorkerById(int id)
