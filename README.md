@@ -76,7 +76,7 @@ A estrutura dos arquivos foi organizada para manter o código modular e reutiliz
 1. Clone o repositório e navegue até o diretório `backend`.
 2. Configure a string de conexão com o PostgreSQL em `appsettings.json`.
 3. Execute os seguintes comandos:
-   ```bash
+```bash
    dotnet restore
    dotnet ef database update
    dotnet run
