@@ -86,6 +86,13 @@ A estrutura dos arquivos foi organizada para manter o código modular e reutiliz
 
 4. A API estará disponível em https://localhost:5001.
 
+#### Backend - Teste
+1. Execute o comando abaixo para rodar o Teste
+```bash
+   cd Worker.Tests
+   dotnet test
+```
+
 #### Frontend
 1. Navegue até o diretório frontend..
 2. Instale as dependências com:
