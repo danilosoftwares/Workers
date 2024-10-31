@@ -1,0 +1,406 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/danilosouza/Documents/Desenvolvimento/MonoRepo/Workers/BackEnd/Worker.Tests/Worker.Tests.csproj": {}
+  },
+  "projects": {
+    "/Users/danilosouza/Documents/Desenvolvimento/MonoRepo/Workers/BackEnd/Worker.Tests/Worker.Tests.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/danilosouza/Documents/Desenvolvimento/MonoRepo/Workers/BackEnd/Worker.Tests/Worker.Tests.csproj",
+        "projectName": "Worker.Tests",
+        "projectPath": "/Users/danilosouza/Documents/Desenvolvimento/MonoRepo/Workers/BackEnd/Worker.Tests/Worker.Tests.csproj",
+        "packagesPath": "/Users/danilosouza/.nuget/packages/",
+        "outputPath": "/Users/danilosouza/Documents/Desenvolvimento/MonoRepo/Workers/BackEnd/Worker.Tests/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/danilosouza/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "/Users/danilosouza/Documents/Desenvolvimento/MonoRepo/Workers/BackEnd/WorkerModels/WorkerModels.csproj": {
+                "projectPath": "/Users/danilosouza/Documents/Desenvolvimento/MonoRepo/Workers/BackEnd/WorkerModels/WorkerModels.csproj"
+              },
+              "/Users/danilosouza/Documents/Desenvolvimento/MonoRepo/Workers/BackEnd/WorkerRepositories/WorkerRepositories.csproj": {
+                "projectPath": "/Users/danilosouza/Documents/Desenvolvimento/MonoRepo/Workers/BackEnd/WorkerRepositories/WorkerRepositories.csproj"
+              },
+              "/Users/danilosouza/Documents/Desenvolvimento/MonoRepo/Workers/BackEnd/WorkerSecurity/WorkerSecurity.csproj": {
+                "projectPath": "/Users/danilosouza/Documents/Desenvolvimento/MonoRepo/Workers/BackEnd/WorkerSecurity/WorkerSecurity.csproj"
+              },
+              "/Users/danilosouza/Documents/Desenvolvimento/MonoRepo/Workers/BackEnd/WorkerServices/WorkerServices.csproj": {
+                "projectPath": "/Users/danilosouza/Documents/Desenvolvimento/MonoRepo/Workers/BackEnd/WorkerServices/WorkerServices.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[17.11.1, )"
+            },
+            "Moq": {
+              "target": "Package",
+              "version": "[4.20.72, )"
+            },
+            "coverlet.collector": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "xunit": {
+              "target": "Package",
+              "version": "[2.9.2, )"
+            },
+            "xunit.runner.console": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.9.2, )"
+            },
+            "xunit.runner.visualstudio": {
+              "target": "Package",
+              "version": "[2.5.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.403/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/danilosouza/Documents/Desenvolvimento/MonoRepo/Workers/BackEnd/WorkerModels/WorkerModels.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/danilosouza/Documents/Desenvolvimento/MonoRepo/Workers/BackEnd/WorkerModels/WorkerModels.csproj",
+        "projectName": "WorkerModels",
+        "projectPath": "/Users/danilosouza/Documents/Desenvolvimento/MonoRepo/Workers/BackEnd/WorkerModels/WorkerModels.csproj",
+        "packagesPath": "/Users/danilosouza/.nuget/packages/",
+        "outputPath": "/Users/danilosouza/Documents/Desenvolvimento/MonoRepo/Workers/BackEnd/WorkerModels/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/danilosouza/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.IdentityModel.Tokens": {
+              "target": "Package",
+              "version": "[8.1.2, )"
+            },
+            "NetDevPack.Security.Jwt.AspNetCore": {
+              "target": "Package",
+              "version": "[7.1.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.403/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/danilosouza/Documents/Desenvolvimento/MonoRepo/Workers/BackEnd/WorkerRepositories/WorkerRepositories.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/danilosouza/Documents/Desenvolvimento/MonoRepo/Workers/BackEnd/WorkerRepositories/WorkerRepositories.csproj",
+        "projectName": "WorkerRepositories",
+        "projectPath": "/Users/danilosouza/Documents/Desenvolvimento/MonoRepo/Workers/BackEnd/WorkerRepositories/WorkerRepositories.csproj",
+        "packagesPath": "/Users/danilosouza/.nuget/packages/",
+        "outputPath": "/Users/danilosouza/Documents/Desenvolvimento/MonoRepo/Workers/BackEnd/WorkerRepositories/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/danilosouza/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "/Users/danilosouza/Documents/Desenvolvimento/MonoRepo/Workers/BackEnd/WorkerModels/WorkerModels.csproj": {
+                "projectPath": "/Users/danilosouza/Documents/Desenvolvimento/MonoRepo/Workers/BackEnd/WorkerModels/WorkerModels.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.8, )"
+            },
+            "NetDevPack.Security.Jwt.Store.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.1.3, )"
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
+              "target": "Package",
+              "version": "[8.0.8, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.403/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/danilosouza/Documents/Desenvolvimento/MonoRepo/Workers/BackEnd/WorkerSecurity/WorkerSecurity.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/danilosouza/Documents/Desenvolvimento/MonoRepo/Workers/BackEnd/WorkerSecurity/WorkerSecurity.csproj",
+        "projectName": "WorkerSecurity",
+        "projectPath": "/Users/danilosouza/Documents/Desenvolvimento/MonoRepo/Workers/BackEnd/WorkerSecurity/WorkerSecurity.csproj",
+        "packagesPath": "/Users/danilosouza/.nuget/packages/",
+        "outputPath": "/Users/danilosouza/Documents/Desenvolvimento/MonoRepo/Workers/BackEnd/WorkerSecurity/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/danilosouza/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "/Users/danilosouza/Documents/Desenvolvimento/MonoRepo/Workers/BackEnd/WorkerModels/WorkerModels.csproj": {
+                "projectPath": "/Users/danilosouza/Documents/Desenvolvimento/MonoRepo/Workers/BackEnd/WorkerModels/WorkerModels.csproj"
+              },
+              "/Users/danilosouza/Documents/Desenvolvimento/MonoRepo/Workers/BackEnd/WorkerRepositories/WorkerRepositories.csproj": {
+                "projectPath": "/Users/danilosouza/Documents/Desenvolvimento/MonoRepo/Workers/BackEnd/WorkerRepositories/WorkerRepositories.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[8.0.10, )"
+            },
+            "Microsoft.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[8.0.1, )"
+            },
+            "Microsoft.IdentityModel.Tokens": {
+              "target": "Package",
+              "version": "[8.1.2, )"
+            },
+            "NetDevPack.Security.Jwt.AspNetCore": {
+              "target": "Package",
+              "version": "[7.1.3, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[8.1.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.403/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/danilosouza/Documents/Desenvolvimento/MonoRepo/Workers/BackEnd/WorkerServices/WorkerServices.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/danilosouza/Documents/Desenvolvimento/MonoRepo/Workers/BackEnd/WorkerServices/WorkerServices.csproj",
+        "projectName": "WorkerServices",
+        "projectPath": "/Users/danilosouza/Documents/Desenvolvimento/MonoRepo/Workers/BackEnd/WorkerServices/WorkerServices.csproj",
+        "packagesPath": "/Users/danilosouza/.nuget/packages/",
+        "outputPath": "/Users/danilosouza/Documents/Desenvolvimento/MonoRepo/Workers/BackEnd/WorkerServices/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/danilosouza/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "/Users/danilosouza/Documents/Desenvolvimento/MonoRepo/Workers/BackEnd/WorkerModels/WorkerModels.csproj": {
+                "projectPath": "/Users/danilosouza/Documents/Desenvolvimento/MonoRepo/Workers/BackEnd/WorkerModels/WorkerModels.csproj"
+              },
+              "/Users/danilosouza/Documents/Desenvolvimento/MonoRepo/Workers/BackEnd/WorkerRepositories/WorkerRepositories.csproj": {
+                "projectPath": "/Users/danilosouza/Documents/Desenvolvimento/MonoRepo/Workers/BackEnd/WorkerRepositories/WorkerRepositories.csproj"
+              },
+              "/Users/danilosouza/Documents/Desenvolvimento/MonoRepo/Workers/BackEnd/WorkerSecurity/WorkerSecurity.csproj": {
+                "projectPath": "/Users/danilosouza/Documents/Desenvolvimento/MonoRepo/Workers/BackEnd/WorkerSecurity/WorkerSecurity.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.403/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

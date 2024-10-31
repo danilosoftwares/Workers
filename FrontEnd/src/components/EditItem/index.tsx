@@ -85,7 +85,7 @@ export const EditItem: React.FC = () => {
   const handleSubmit = async () => {
     try {
       setSubmitted(false);
-      if (worker.firstName && worker.lastName && worker.passwordHash && worker.workerNumber) {
+      if (worker.firstName && worker.lastName && worker.passwordHash  && worker.corporateEmail && worker.workerNumber) {
         worker.phones = listPhones.map(m=>m.phone);
         const result = !isEdit() ? await CreateWorker(worker) : await EditWorker(worker);
         if (result.status) {
