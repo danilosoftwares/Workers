@@ -19,6 +19,9 @@ Este repositório contém uma aplicação completa que integra um backend robust
 - **Estilização**: Styled Components
 - **Gerenciamento de Estado**: Context API
 
+Flow Flux
+![](/flux-basic.png)
+
 ---
 
 ## ⚙️ Funcionalidades do Projeto
@@ -29,12 +32,17 @@ Este repositório contém uma aplicação completa que integra um backend robust
 3. **Integração com PostgreSQL** usando Entity Framework Core para modelagem e persistência de dados.
 4. **Validação e Tratamento de Erros** para melhorar a segurança e robustez das APIs.
 
+Flow Backend
+![](/flux-backend.png)
+
 ### Frontend
 1. **UI Responsiva** usando PrimeReact e Styled Components para uma experiência de usuário fluida e bonita.
 2. **Gestão de Estado Centralizada** com Context API, garantindo consistência de dados entre os componentes.
 3. **Autenticação com JWT** e persistência de sessão.
 4. **Formulários Dinâmicos e Validação** para captura de dados de forma prática e intuitiva.
 
+Flow Frontend
+![](/flux-frontend.png)
 ---
 
 ## 📂 Estrutura do Projeto
